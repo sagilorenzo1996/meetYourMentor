@@ -69,39 +69,63 @@ public class MeetingRequestsController {
 
     @CrossOrigin
     @PostMapping("/accept/{id}")
-    public Optional<MeetingRequest> acceptMeeting(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
+    public Long acceptMeeting(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
         Optional<MeetingRequest> meetingRequest = meetingRequestRepository.findById(id);
         if (!meetingRequest.isPresent()) {
             throw new ResourceNotFoundException("Request Not Found");
         }
         meetingRequest.get().setAcceptedDateTime(new Date());
         meetingRequest.get().setAcceptance("Yes");
-        return meetingRequest;
+        meetingRequestRepository.save(meetingRequest.get());
+        return meetingRequest.get().getId();
     }
 
     @CrossOrigin
     @PostMapping("/decline/{id}")
-    public Optional<MeetingRequest> declineMeeting(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
+    public Long declineMeeting(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
         Optional<MeetingRequest> meetingRequest = meetingRequestRepository.findById(id);
         if (!meetingRequest.isPresent()) {
             throw new ResourceNotFoundException("Request Not Found");
         }
         meetingRequest.get().setAcceptedDateTime(new Date());
         meetingRequest.get().setAcceptance("Dec");
-        return meetingRequest;
+        meetingRequestRepository.save(meetingRequest.get());
+        return meetingRequest.get().getId();
     }
 
     @CrossOrigin
     @GetMapping("/lecturer/{id}")
-    public Iterable<MeetingRequest> declineMeeting(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
-        
+    public Iterable<MeetingRequest> lecturerMeeting(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
+        Optional<Lecturer> lecturer = lecturerRepository.findById(id);
+        if (!lecturer.isPresent()) {
+            throw new ResourceNotFoundException("Lecturer Not Found");
+        }
+        Iterable<MeetingRequest> meetingRequests = meetingRequestRepository.findByLecturer(lecturer.get());
+        return meetingRequests;
     }
 
 
-        @CrossOrigin
+    @CrossOrigin
     @GetMapping("/student/{id}")
+    public Iterable<MeetingRequest> studentMeeting(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
+        Optional<Student> student = studentRepository.findById(id);
+        if (!student.isPresent()) {
+            throw new ResourceNotFoundException("Student Not Found");
+        }
+        Iterable<MeetingRequest> meetingRequests = meetingRequestRepository.findByStudent(student.get());
+        return meetingRequests;
+    }
 
-
-
+    @CrossOrigin
+    @DeleteMapping("/{id}")
+    public String deleteMeetingRequest(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
+        Optional<MeetingRequest> meetingRequest = meetingRequestRepository.findById(id);
+        if (!meetingRequest.isPresent()) {
+            throw new ResourceNotFoundException("Schedule Not Found");
+        } else {
+            meetingRequestRepository.delete(meetingRequest.get());
+        }
+        return "Meeting Request deleted successfully";
+    }
 
 }

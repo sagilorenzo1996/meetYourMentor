@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MeetingRequestRepository extends CrudRepository<MeetingRequest,Long> {
-    Iterable<MeetingRequest> findByStudent(Student student);
-    Iterable<MeetingRequest> findByLecturer(Lecturer lecturer);
+    Iterable<MeetingRequest> findAllByStudent(Student student);
+    Iterable<MeetingRequest> findAllByLecturer(Lecturer lecturer);
 }

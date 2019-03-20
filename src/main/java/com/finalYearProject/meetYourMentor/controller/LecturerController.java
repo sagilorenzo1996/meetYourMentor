@@ -25,12 +25,12 @@ public class LecturerController {
 
     @CrossOrigin
     @PostMapping("/login")
-    public Object login(@Valid @RequestBody Login login) throws ResourceNotFoundException  {
-        Optional<Lecturer> lecturer= lecturerRepository.findByEmail(login.getUsername());
-        if(!lecturer.isPresent()){
+    public Object login(@Valid @RequestBody Login login) throws ResourceNotFoundException {
+        Optional<Lecturer> lecturer = lecturerRepository.findByEmail(login.getUsername());
+        if (!lecturer.isPresent()) {
             throw new ResourceNotFoundException("Lecturer Not Registered");
         }
-        if(lecturer.get().getPassword().equals(login.getPassword())){
+        if (lecturer.get().getPassword().equals(login.getPassword())) {
             return lecturer.get();
         }
         return -1;
@@ -44,6 +44,12 @@ public class LecturerController {
             throw new ResourceNotFoundException("Lecturer Not Found");
         }
         return lecturer;
+    }
+
+    @CrossOrigin
+    @GetMapping("/all")
+    public Iterable<Lecturer> getAllLecturers() {
+        return lecturerRepository.findAll();
     }
 
     @CrossOrigin

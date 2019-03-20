@@ -73,7 +73,7 @@ public class ScheduleController {
         if (!lecturer.isPresent()) {
             throw new ResourceNotFoundException("Lecturer Not Found");
         }
-        Iterable<Schedule> schedule = scheduleRepository.findByLecturer(lecturer.get());
+        Iterable<Schedule> schedule = scheduleRepository.findAllByLecturer(lecturer.get());
         return schedule;
     }
 }

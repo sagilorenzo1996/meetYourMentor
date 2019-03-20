@@ -48,6 +48,12 @@ public class StudentController {
     }
 
     @CrossOrigin
+    @GetMapping("/all")
+    public Iterable<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
+
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public String deleteStudent(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
         Optional<Student> student = studentRepository.findById(id);

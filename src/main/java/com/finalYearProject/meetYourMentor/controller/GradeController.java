@@ -72,7 +72,7 @@ public class GradeController {
         if (!student.isPresent()) {
             throw new ResourceNotFoundException("Student Not Found");
         }
-        Iterable<Grade> grade = gradeRepository.findByStudent(student.get());
+        Iterable<Grade> grade = gradeRepository.findAllByStudent(student.get());
         return grade;
     }
 

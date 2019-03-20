@@ -100,7 +100,7 @@ public class MeetingRequestsController {
         if (!lecturer.isPresent()) {
             throw new ResourceNotFoundException("Lecturer Not Found");
         }
-        Iterable<MeetingRequest> meetingRequests = meetingRequestRepository.findByLecturer(lecturer.get());
+        Iterable<MeetingRequest> meetingRequests = meetingRequestRepository.findAllByLecturer(lecturer.get());
         return meetingRequests;
     }
 
@@ -112,7 +112,7 @@ public class MeetingRequestsController {
         if (!student.isPresent()) {
             throw new ResourceNotFoundException("Student Not Found");
         }
-        Iterable<MeetingRequest> meetingRequests = meetingRequestRepository.findByStudent(student.get());
+        Iterable<MeetingRequest> meetingRequests = meetingRequestRepository.findAllByStudent(student.get());
         return meetingRequests;
     }
 

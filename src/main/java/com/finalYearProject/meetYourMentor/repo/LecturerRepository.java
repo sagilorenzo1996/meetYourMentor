@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface LecturerRepository extends CrudRepository<Lecturer,Long> {
     Optional<Lecturer> findByEmail(String email);
+    Iterable<Lecturer> findAllByFaculty(String faculty);
 }

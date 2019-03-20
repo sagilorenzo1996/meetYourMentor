@@ -23,8 +23,8 @@ public class GradeController {
 
     @CrossOrigin
     @PostMapping("/")
-    public Grade createGrade(@Valid @RequestBody Grade grade) {
-        return gradeRepository.save(grade);
+    public Long createGrade(@Valid @RequestBody Grade grade) {
+        return gradeRepository.save(grade).getId();
     }
 
     @CrossOrigin
@@ -61,9 +61,8 @@ public class GradeController {
             grade.get().setStatus(newGrade.getStatus());
             grade.get().setStudent(newGrade.getStudent());
             gradeRepository.save(grade.get());
-            gradeRepository.save(grade.get());
         }
-        return "Grade deleted successfully";
+        return "Grade updated successfully";
     }
 
     @CrossOrigin
@@ -76,8 +75,6 @@ public class GradeController {
         Iterable<Grade> grade = gradeRepository.findByStudent(student.get());
         return grade;
     }
-
-    
 
 
 }

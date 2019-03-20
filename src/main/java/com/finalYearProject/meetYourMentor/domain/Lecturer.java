@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Set;
 
 
@@ -15,7 +16,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "Lecturer")
-public class Lecturer {
+public class Lecturer implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

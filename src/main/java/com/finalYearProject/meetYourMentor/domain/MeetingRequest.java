@@ -6,13 +6,14 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 
 @Entity
 @Table(name = "MeetingRequest")
-public class MeetingRequest {
+public class MeetingRequest implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,12 +22,10 @@ public class MeetingRequest {
     @NotNull
     private String acceptance;
 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    @NotNull
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date sentDateTime;
 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    @NotNull
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date acceptedDateTime;
 
     @NotNull

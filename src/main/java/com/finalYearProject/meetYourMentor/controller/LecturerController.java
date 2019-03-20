@@ -16,13 +16,14 @@ public class LecturerController {
     LecturerRepository lecturerRepository;
 
     @CrossOrigin
-    @PostMapping("/add")
-    public Lecturer addLecturer(@Valid @RequestBody Lecturer lecturer){
+    @PostMapping("/")
+    public Lecturer addLecturer(@Valid @RequestBody Lecturer lecturer) {
         return lecturerRepository.save(lecturer);
     }
-    
+
     @PostMapping("/get")
-    public String Test(){
+    public String Test() {
         return "Hiiii";
     }
+
 }

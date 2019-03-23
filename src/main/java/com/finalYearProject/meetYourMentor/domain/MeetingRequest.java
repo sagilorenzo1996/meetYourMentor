@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -31,7 +32,8 @@ public class MeetingRequest implements Serializable {
     @NotNull
     private String type;
 
-    @NotNull @Max(200)
+    @NotNull
+    @Size(min=2,max = 50)
     private String reason;
 
     @NotNull

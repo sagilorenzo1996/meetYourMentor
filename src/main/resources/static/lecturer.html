@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <title>Lecturer</title>
+  <style>
+    body{
+      background: url(img/header.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 1000px;
+      background-color: rgba(0, 0, 0, 0.5);
+      
+    }
+  </style>
+</head>
+
+<body> 
+  
+
+  <!--Nav Bar-->
+  
+  <nav class="nav-wraper transparent">
+    <div class="container">
+      <ul class="right">
+        <li><a href="#" class="btn-floating black pulse z-depth-0 "style="position: left;">
+        <i class="material-icons">notifications</i>
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Side Nav-->
+
+    <ul id="slide-out" class="sidenav ">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="img/background.jpg">
+        </div>
+        <style></style>
+        <a href="#user"><img class="circle" src="img/pic.jpg" ></a>
+        <a href="#name"><span class="white-text name" style="font-weight:bold; font:serif;">Nishal</span></a>
+        <a href="#email"><span class="white-text email"style="font-weight:bold; font:serif;">nishalarjuna4@gmail.com</span></a>
+      </div></li>
+      <li><a href="#!"><i class="material-icons">home</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger" style="color:white;"><i class="material-icons">menu</i></a>
+  
+    <!--Form-->
+
+        <section class="container" id="contact">
+          <div class="row">
+            <div class="col s12 15">
+              <img src="img/req.jpg">
+          </div>
+          <div class="input-field col s6">
+              <i class="material-icons prefix" style="color:white;">account_circle</i>
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name" style="font-weight:bold; color:white;">Name/Username</label>
+              <br>
+            </div>
+            
+            <div class="input-field col s6">
+                <i class="material-icons prefix" style="color:white;">account_circle</i>
+                <select>
+                  <option value="" disabled selected >Choose your option</option>
+                  <option value="1">Mr. Rasika Hewawasam Ranaweerage</option>
+                  <option value="2">Mr. Isura Nirmal</option>
+                  <option value="3">Mrs. Dileeka Alwis</option>
+                </select>
+                <label style="font-weight:bold; color:white; font-size: 13px;">Lecture Name</label>
+              </div>
+              <div class="input-field col s6">
+                  <i class="material-icons prefix" style="color:white;">account_circle</i>
+                  <select>
+                    <option value="" disabled selected >Choose your option</option>
+                    <option value="1" >Mr.Rasika Hewawasam Ranaweerage</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                  <label style="font-weight:bold; color:white;font-size: 13px;">Purpose</label>
+                </div>
+                <div class="input-field col s7">
+                    <i class="fas fa-calendar-alt prefix" style="color:white;"></i>
+                  <input type="text" id="date" class="datepicker">
+                  <label for="date" style="font-weight:bold; color:white; font-size: 18px;"> Choose a date</label>
+                </div>
+                <div class="input-field col s7">
+                    <i class="fas fa-clock prefix" style="color:white;"></i>
+                  <input type="text" id="time" class="timepicker">
+                  <label for="Time" style="font-weight:bold; color:white; font-size: 13px;"> Choose a Time</label>
+                </div>
+      </section>   
+      
+      
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script>
+   $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('select').formSelect();
+    $('.datepicker').datepicker();
+    $('.timepicker').timepicker();
+  });
+ </script>
+ 
+ 
+</body>
+
+</html>

@@ -14,7 +14,18 @@
   <div class="nav-wrapper indigo darken-4 ">
     <a href="/" class="brand-logo hide-on-small-only">&nbsp;M<small>eet</small> Y<small>our</small> M<small>entor</small></a>
     <a href="/" class="brand-logo show-on-small hide-on-med-and-up">&nbsp;<small>MeetYourMentor</small></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/studentProfile"><i class="material-icons">
+        account_circle
+      </i></a></li>
+      <li><a href="/badges.html">Logout</a></li>
+    </ul>
   </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/studentProfile">Go to profile</a></li>
+    <li><a href="/badges.html">Logout</a></li>
+  </ul>
 </nav>
 <div style="min-height: 1000px;" class="container">
   <div class="row">
@@ -52,10 +63,6 @@
                   </select>
                   <label>Reason for meeting</label>
                 </div>
-                <!--<div class="input-field col s6">-->
-                  <!--<input id="last_name" type="text" class="validate">-->
-                  <!--<label for="last_name">Last Name</label>-->
-                <!--</div>-->
               </div>
               <div class="row">
                 <div class="input-field col l6 m6 s12">
@@ -71,17 +78,27 @@
                 </div>
                 <div class="input-field col l6 m6 s12">
                   <select>
-                    <option value="" disabled selected>Choose your reason</option>
-                    <option value="1">Consulting</option>
-                    <option value="2">Clarification</option>
-                    <option value="3">Other</option>
+                    <option value="" disabled selected>Choose a place to meet</option>
+                    <option value="1">Lecturer cabin</option>
+                    <option value="2">C001</option>
+                    <option value="3">C002</option>
+                    <option value="3">Lecturer Preferred</option>
                   </select>
-                  <label>Reason for meeting</label>
+                  <label>Avaiable Venues</label>
                 </div>
                 <!--<div class="input-field col s6">-->
                 <!--<input id="last_name" type="text" class="validate">-->
                 <!--<label for="last_name">Last Name</label>-->
                 <!--</div>-->
+              </div>
+              <div class="row">
+                <div class="input-field col l6 m6 s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Other Information</label>
+                </div>
+                <div class="col l6 m6 s12 center-align">
+                  <a class="waves-effect waves-light btn indigo darken-4"><i class="material-icons right">send</i>Send</a>
+                </div>
               </div>
             </form>
           </div>
@@ -178,22 +195,106 @@
           </table>
         </div>
         <div id="test3" class="col s12">
-          Test 3
+          <h4>Received Meetings</h4>
+          <table class="highlight responsive-table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>From</th>
+              <th>Date & Time</th>
+              <th>Venue</th>
+              <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mr. Isura Nirmal</td>
+              <td>
+                12 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mr. Chaminda Wijesinghe</td>
+              <td>
+                13 April 2019<br>
+                12:00 am to 12:30 am
+              </td>
+              <td>C001</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Mr. Isura Nirmal</td>
+              <td>
+                14 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Mr. Isura Nirmal</td>
+              <td>
+                15 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>L002</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Mr. Isura Nirmal</td>
+              <td>
+                16 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Mr. Isura Nirmal</td>
+              <td>
+                17 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            </tbody>
+          </table>
         </div>
         <div id="test4" class="col s12">
-          Test 4
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">done_all</i>Mr. Isurua Nirmal</div>
+              <div class="collapsible-body">
+                <div>2019-04-02 12:00 am</div>
+                <p>Impressive design and performance on your model. Keep up the good word</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">done_all</i>Mrs. Dileeka Alwis</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">done_all</i>Mr Chaminda Rathnayake</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
         </div>
       </div>
 
     </div>
   </div>
 </div>
-<div class="fixed-action-btn">
-  <a class="btn-floating btn-large indigo darken-4">
-    <i class="large material-icons">add</i>
-  </a>
-</div>
-
 <footer class="page-footer indigo darken-4">
   <div class="container">
     <div class="row">

@@ -41,6 +41,11 @@ public class webController {
         return "lecturerMeeting.html";
     }
 
+    @GetMapping("/studentProfile")
+    public String studentProfile() {
+        return "studentProfile.html";
+    }
+
     @GetMapping("/studentMeeting")
     public String studentMeeting() {
         return "studentMeeting.html";

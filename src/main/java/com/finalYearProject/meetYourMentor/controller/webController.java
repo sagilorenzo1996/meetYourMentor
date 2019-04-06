@@ -2,15 +2,13 @@ package com.finalYearProject.meetYourMentor.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class webController {
 
     @GetMapping("/")
     public String home() {
-        return "login.html";
+        return "index.html";
     }
 
     @GetMapping("/studentDashboard")
@@ -18,45 +16,43 @@ public class webController {
         return "studentDashboard.html";
     }
 
-    @GetMapping("/user/lecturer")
+    @GetMapping("/lecturerDashboard")
     public String lecturerPage() {
-        return "lecturer.html";
+        return "lecturerDashboard.html";
     }
-//
-    @GetMapping("/admin")
+
+    @GetMapping("/studentLogin")
+    public String studentLoginPage() {
+        return "studentLogin.html";
+    }
+
+    @GetMapping("/lecturerLogin")
+    public String lecturerLoginPage() {
+        return "lecturerLogin.html";
+    }
+
+    @GetMapping("/adminLogin")
+    public String adminLoginPage() {
+        return "adminLogin.html";
+    }
+
+    @GetMapping("/lecturerMeeting")
+    public String lecturerMeeting() {
+        return "lecturerMeeting.html";
+    }
+
+    @GetMapping("/studentMeeting")
+    public String studentMeeting() {
+        return "studentMeeting.html";
+    }
+
+    @GetMapping("/add/users")
     public String register() {
         return "admin.html";
     }
-//
-//    @GetMapping("/myAccount")
-//    public String myAccount() {
-//        return "myAccount.html";
-//    }
-//
-//    @GetMapping("/all")
-//    public String all() {
-//        return "all.html";
-//    }
-//
-//    @GetMapping("/category/{category}")
-//    public String category(@PathVariable String category) {
-//        return "category.html";
-//    }
-//
-//    @GetMapping("/cart")
-//    public String itemPage(@RequestParam Long id) {
-//        return "item.html";
-//    }
 
-
-
-//    @GetMapping("/listing")
-//    public Object listing() {
-//        return "listing.html";
-//    }
-//
-//    @GetMapping("/error")
-//    public Object error() {
-//        return "404.html";
-//    }
+    @GetMapping("/add/grades")
+    public String addGrades() {
+        return "admin.html";
+    }
 }

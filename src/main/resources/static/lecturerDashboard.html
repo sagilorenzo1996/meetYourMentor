@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Meet Your Mentor</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="">
+<nav>
+  <div class="nav-wrapper indigo darken-4 ">
+    <a href="/" class="brand-logo hide-on-small-only">&nbsp;M<small>eet</small> Y<small>our</small> M<small>entor</small></a>
+    <a href="/" class="brand-logo show-on-small hide-on-med-and-up">&nbsp;<small>MeetYourMentor</small></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/studentProfile"><i class="material-icons">
+        account_circle
+      </i></a></li>
+      <li><a href="/badges.html">Logout</a></li>
+    </ul>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/studentProfile">Go to profile</a></li>
+    <li><a href="/badges.html">Logout</a></li>
+  </ul>
+</nav>
+<div style="min-height: 1000px;" class="">
+  <div class="row">
+    <div class="col s12">
+      <br>
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs ">
+            <li class=" col s1">
+            <li class="tab col s2"><a href="#test1" class="active indigo-text darken-4">Request</a></li>
+            <li class="tab col s2"><a class=" indigo-text darken-4" href="#test2">Sent Requests</a></li>
+            <li class="tab col s2"><a class="indigo-text darken-4" href="#test3">Received Requests</a></li>
+            <li class="tab col s2"><a class="indigo-text darken-4" href="#test4">Meeting History</a></li>
+            <li class="tab col s2"><a class="indigo-text darken-4" href="#test5">Schedule</a></li>
+            <li class=" col s1">
+          </ul>
+        </div>
+        <div id="test1" class="col s12">
+          <h4>New Request</h4>
+          <div class="row">
+            <div class="col l6 m6 s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="autocomplete-input" class="autocomplete">
+                  <label for="autocomplete-input">Search Student</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <div class="collection">
+                    <a href="#!" class="collection-item active">Nishal Arjuna (PLY)</a>
+                    <a href="#!" class="collection-item">Nimesh Aruna (PLY)</a>
+                    <a href="#!" class="collection-item">Nilesh Thilakaratne (PLY)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col l6 m6 s12">
+              <div class="card">
+                <div class="card-content">
+                  <h5>Student Info</h5>
+                  <p>Bio : I am Nishal. Eager to learn new things and technologies in IT. I like to help people and be good to society</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a href="#qtest4">Profile</a></li>
+                    <li class="tab"><a  href="#qtest5">Grades</a></li>
+                    <li class="tab"><a href="#qtest6">Meetings</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="qtest4">
+                    <div>Name: Nishal Arjuna</div>
+                    <div>Degree: Bsc (Hons) Software Engineering</div>
+                    <div>Year: 3rd Year</div>
+                    <div>Status: in course</div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col l6 m6 s12">
+                        <select>
+                          <option value="" disabled selected>Available times</option>
+                          <option value="1">2019-04-10 10:00 am to 2019-04-10 12:30 am</option>
+                          <option value="1">2019-05-10 10:00 am to 2019-04-10 12:30 am</option>
+                          <option value="1">2019-06-10 10:00 am to 2019-04-10 12:30 am</option>
+                          <option value="1">2019-07-10 10:00 am to 2019-04-10 12:30 am</option>
+                          <option value="1">2019-08-10 10:00 am to 2019-04-10 12:30 am</option>
+                        </select>
+                        <label>Student</label>
+                      </div>
+                      <div class="input-field col l6 m6 s12">
+                        <select>
+                          <option value="" disabled selected>Choose a place to meet</option>
+                          <option value="1">Lecturer cabin</option>
+                          <option value="2">C001</option>
+                          <option value="3">C002</option>
+                          <option value="3">Lecturer Preferred</option>
+                        </select>
+                        <label>Avaiable Venues</label>
+                      </div>
+                      <!--<div class="input-field col s6">-->
+                      <!--<input id="last_name" type="text" class="validate">-->
+                      <!--<label for="last_name">Last Name</label>-->
+                      <!--</div>-->
+                    </div>
+                    <div class="row">
+                      <div class="input-field col l6 m6 s12">
+                        <select>
+                          <option value="" disabled selected>Choose a reason</option>
+                          <option value="1">Clarifying</option>
+                          <option value="1">Lecture need</option>
+                          <option value="1">Extra curricular</option>
+                          <option value="1">Other</option>
+                        </select>
+                        <label>Reason</label>
+                      </div>
+                      <div class="col l6 m6 s12 center-align">
+                        <a class="waves-effect waves-light btn indigo darken-4"><i class="material-icons right">send</i>button</a>
+                      </div>
+                      <!--<div class="input-field col s6">-->
+                      <!--<input id="last_name" type="text" class="validate">-->
+                      <!--<label for="last_name">Last Name</label>-->
+                      <!--</div>-->
+                    </div>
+                  </div>
+                  <div id="qtest5">
+                    <h5>Grades</h5>
+                    <table class="responsive-table highlight">
+                      <thead>
+                      <tr>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                        <th>Semester</th>
+                      </tr>
+                      </thead>
+
+                      <tbody>
+                      <tr>
+                        <td>DBMS</td>
+                        <td>A</td>
+                        <td>3Y1S</td>
+                      </tr>
+                      <tr>
+                        <td>Java</td>
+                        <td>A</td>
+                        <td>3Y1S</td>
+                      </tr>
+                      <tr>
+                        <td>Advanced Networking</td>
+                        <td>A</td>
+                        <td>3Y1S</td>
+                      </tr>
+                      <tr>
+                        <td>C++</td>
+                        <td>A</td>
+                        <td>3Y1S</td>
+                      </tr>
+                      <tr>
+                        <td>Advanced Networking</td>
+                        <td>A</td>
+                        <td>3Y1S</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="qtest6">
+                    <h5>Meeting Count - 12</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        <div id="test2" class="col s12">
+          <h4>Sent Meetings</h4>
+          <table class="highlight responsive-table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>To</th>
+              <th>Date & Time</th>
+              <th>Venue</th>
+              <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mr. Nishal Arjuna</td>
+              <td>
+                12 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mr. Udana Kithulgoda</td>
+              <td>
+                13 April 2019<br>
+                12:00 am to 12:30 am
+              </td>
+              <td>C001</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Mr. Sajee Lorenzo</td>
+              <td>
+                14 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Mr. Angelo Rosa</td>
+              <td>
+                15 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>L002</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Mr. Nishal Arjuna</td>
+              <td>
+                16 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Mr. Isura Nirmal</td>
+              <td>
+                17 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="test3" class="col s12">
+          <h4>Received Meetings</h4>
+          <table class="highlight responsive-table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>From</th>
+              <th>Date & Time</th>
+              <th>Venue</th>
+              <th>Approve</th>
+              <th>Cancel</th>
+              <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mr. Nishal Arjuna</td>
+              <td>
+                12 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#" class="green-text"><i class="material-icons">done</i></a></td>
+              <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mr. Sajee Lorenzo</td>
+              <td>
+                13 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#" class="green-text"><i class="material-icons">done_all</i></a></td>
+              <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mr. Anjelo Rosa</td>
+              <td>
+                13 April 2019<br>
+                11:00 am to 11:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#" class="green-text"><i class="material-icons">done</i></a></td>
+              <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Mr. Nishal Arjuna</td>
+              <td>
+                12 April 2019<br>
+                10:00 am to 10:30 am
+              </td>
+              <td>Lecturer cabin</td>
+              <td><a href="#" class="green-text"><i class="material-icons">done_all</i></a></td>
+              <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+              <td><a href="#"><i class="material-icons">send</i></a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="test4" class="col s12">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">done_all</i>Mr. Nishal Arjuna</div>
+              <div class="collapsible-body">
+                <div>2019-04-02 12:00 am</div>
+                <div class="row">
+                  <div class="input-field col l6 m6 s12">
+                    <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea2">Leave Feedback</label>
+                    <button class="btn btn-large indigo darken-4">send</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">done_all</i>Mrs. Dileeka Alwis</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">done_all</i>Mr Chaminda Rathnayake</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+        </div>
+        <div id="test5" class="col s12">
+          <div class="row">
+            <div class="col s12 l6 m6">
+              <h5>Enter you schedules</h5>
+              <div class="row">
+                <div class="col s12">
+                  <input type="text" class="datepicker" placeholder="Enter date">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <input type="text" class="timepicker" placeholder="Enter time">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected>Choose what you do</option>
+                    <option value="1">Lecture</option>
+                    <option value="1">Meeting</option>
+                    <option value="1">Available time</option>
+                    <option value="1">Other</option>
+                  </select>
+                  <label>Purpose</label>
+                </div>
+                <button class="btn btn-large waves-effect waves-light indigo darken-4"><i class="material-icons right">send</i>Update Schedule</button>
+              </div>
+            </div>
+            <div class="col s12 l6 m6">
+              <table class="responsive-table highlight">
+                <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Purpose</th>
+                  <th>Time</th>
+                  <th>Cancel</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                  <td>April 8,2019</td>
+                  <td>Lecture</td>
+                  <td>9:00 am - 12:00 am</td>
+                  <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+                </tr>
+                <tr>
+                  <td>April 9,2019</td>
+                  <td>Lecture</td>
+                  <td>9:00 am - 12:00 am</td>
+                  <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+                </tr>
+                <tr>
+                  <td>April 10,2019</td>
+                  <td>Lecture</td>
+                  <td>9:00 am - 12:00 am</td>
+                  <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+                </tr>
+                <tr>
+                  <td>April 11,2019</td>
+                  <td>Lecture</td>
+                  <td>9:00 am - 12:00 am</td>
+                  <td><a href="#" class="red-text"><i class="material-icons">close</i></a></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<footer class="page-footer indigo darken-4">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Get the best out of your lecturer</h5>
+        <p class="grey-text text-lighten-4">We developed this for you
+        </p>
+
+
+      </div>
+      <div class="col l3 s12">
+      </div>
+      <div class="col l3 s12">
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Made by <a class="white-text" >@Nishal</a>
+    </div>
+  </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
